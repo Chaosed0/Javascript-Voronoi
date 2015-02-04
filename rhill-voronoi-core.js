@@ -1717,4 +1717,5 @@ Voronoi.prototype.compute = function(sites, bbox) {
     return diagram;
     };
 
-if(typeof module !== 'undefined') module.exports = Voronoi;
+if(typeof define === 'function' && define.amd) define(function() { return Voronoi });
+else if(typeof module !== 'undefined') module.exports = Voronoi;
